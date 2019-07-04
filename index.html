@@ -8,41 +8,64 @@
 			thead td {
 				background: #f1f4f7;
 				color: #5a6a7c;
+				font-size: 14px;
+				padding: 3px;
+				padding-bottom: .65rem;
+				padding-top: .65rem;
+
 			}
 			.table td {
 				vertical-align: middle;
 				text-align: center;
 				font-weight: 600;
-				font-size: 30px;
+				font-size: 14px;
+				padding: 3px;
+				padding-bottom: .65rem;
+				padding-top: .65rem;
 			}
 			.text-content {
 				text-align: justify;
+				padding: 10px;
+				padding-right: 30px;
 			}
 			#table-wrapper {
-				padding: 15px;
+				padding: 10px;
+				padding-right: 30px;
+			}
+
+			*, ::after, ::before {
+			     box-sizing: content-box; 
+			}
+
+			.container-fluid {
+			    width: 100%;
+			    padding-right: 15px;
+			    padding-left: unset;
+			    margin-right: auto;
+			    margin-left: unset;
 			}
 
 		</style>
 	</head>
 	<body>
-	<div class="container-fluid">
+	<div class="container-fluid" id="cont" >
 		<div class="row">
-			<div class="col-sm-12" >
+			<div class="col-sm-12 col-xs-12" >
 				<div id="table-wrapper"></div>
-				<div style="padding: 30px">
-					<div><h1>Как определить свой размер?</h1></div>
+				<div style="padding-left: 15px">
+					<div><h5>Как определить свой размер?</h5></div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12" >
+			<div class="col-sm-12 col-xs-12">
 				<div class="text-content">
-				<div class="accordion" id="accordionExample">
+				<div class="accordion" id="accordionExample" style="box-sizing: inherit;">
 				  <div class="card">
 				    <div class="card-header" id="headingOne">
 				      <h5 class="mb-0">
 				        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				          <h2>Одежда</h2>
+				          Одежда
 				        </button>
 				      </h5>
 				    </div>
@@ -60,7 +83,7 @@
 				    <div class="card-header" id="headingTwo">
 				      <h5 class="mb-0">
 				        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          <h2>Нижнее белье</h2>
+				          Нижнее белье
 				        </button>
 				      </h5>
 				    </div>
@@ -78,7 +101,7 @@
 				    <div class="card-header" id="headingThree">
 				      <h5 class="mb-0">
 				        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				          <h2>Обувь</h2>
+				          Обувь
 				        </button>
 				      </h5>
 				    </div>
@@ -181,6 +204,13 @@
 		</script>
 
 		<script type="text/javascript">
+
+			var width = screen ? screen.width : 350;
+
+			document.getElementById('cont').setAttribute("style", `width: ${width}px;`);
+
+
+
 			var rows='', th = ''; keysParams = [];
 			var sizes = data.size_grid_entries;
 			for(var key in sizes[0].params) {
@@ -201,8 +231,8 @@
 			var table = `<table class="table table-bordered">
 							<thead>
 								<tr>
-									<td style="width: 50px">Размер Россия</td>
-									<td style="width: 50px">Размер производитель</td>
+									<td style="width: 50px">Россия</td>
+									<td style="width: 50px">TS</td>
 									${th}
 								</tr>
 							</thead>
