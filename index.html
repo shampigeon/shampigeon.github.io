@@ -25,12 +25,12 @@
 			}
 			.text-content {
 				text-align: justify;
-				padding: 10px;
-				padding-right: 30px;
+				/*padding: 10px;*/
+				/*padding-right: 30px;*/
 			}
 			#table-wrapper {
-				padding: 10px;
-				padding-right: 30px;
+				/*padding: 24px;*/
+				/*padding-right: 30px;*/
 			}
 
 			*, ::after, ::before {
@@ -39,12 +39,33 @@
 
 			.container-fluid {
 			    width: 100%;
-			    padding-right: 15px;
+			    /*padding-right: 15px;*/
 			    padding-left: unset;
 			    margin-right: auto;
 			    margin-left: unset;
+			    padding: 24px;
 			}
 
+			.card{
+				border: 0px;
+			}
+			.card-header {
+				padding-left: 0px;
+				background: transparent;
+			}
+			.card-body {
+				padding: 0px;
+			}
+			.btn-link {
+				padding: 0px;
+				color: #000;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.btn-link:hover {
+				color: #000;
+				text-decoration: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -52,8 +73,8 @@
 		<div class="row">
 			<div class="col-sm-12 col-xs-12" >
 				<div id="table-wrapper"></div>
-				<div style="padding-left: 15px">
-					<div><h5>Как определить свой размер?</h5></div>
+				<div style="padding-bottom: 5px; padding-top: 10px">
+					<div style="font-size: 20px; line-height: 24px; font-weight: 500">Как определить свой размер?</div>
 				</div>
 			</div>
 		</div>
@@ -232,7 +253,7 @@
 							<thead>
 								<tr>
 									<td style="width: 50px">Россия</td>
-									<td style="width: 50px">TS</td>
+									<td style="width: 50px">INT</td>
 									${th}
 								</tr>
 							</thead>
